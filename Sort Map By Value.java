@@ -6,11 +6,27 @@ import java.util.TreeMap;
 public class Solution {
 	public static void main(String[] args){
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		map.put("a", 10);
-		map.put("b", 30);
-		map.put("c", 50);
-		map.put("d", 40);
-		map.put("e", 20);
+		try{
+			BufferReader weblog = new BufferReader(new FileReader("src/access1.log"));
+			String line = null;
+			HashMap<String, Integer> map = new HashMap<String, Integer>();
+			while (( line = weblog.readline()) != null
+			{
+				String parts = line.split("\t");
+				if( map.containsKey(parts[4])) {
+					map.get(parts[4], map.get(key) + 1);
+				}else{
+					map.put(parts[4], map.get(key) + 1);
+				}
+				}
+			}
+			catch(IOException ex) {
+				System.out.println("Error in connection: " + ex.getMessage());
+				
+			}
+
+		}
+	
 		System.out.println(map);
  
 		TreeMap<String, Integer> sortedMap = SortByValue(map);  
