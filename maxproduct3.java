@@ -7,7 +7,7 @@ public class Solution{
     sum_ = nums[0];
     for (int i = 1; i < nums.length; i++){
       if ( sum_ < 0 ){
-        max_p = nums[i];
+        sum_ = nums[i];
         temp = nums[i];
       }
       else{
