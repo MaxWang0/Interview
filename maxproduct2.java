@@ -15,7 +15,7 @@ public class solution{
         }
       }
     }
-    system.out.println(i + " " + j + " " + max_p);
+    system.out.println(nums[i] + " " + nums[j] + " " + max_p);
     return max_p;
   }
 }
