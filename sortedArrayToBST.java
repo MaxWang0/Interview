@@ -11,7 +11,7 @@ public class Solution{
     TreeNode root = new TreeNode(num[mid]);
     
     root.left = rec(num, low, mid);
-    root.right = rec(num, mid, right);
+    root.right = rec(num, mid+1, high);
     
     return root;
   }
