@@ -20,6 +20,6 @@ public static int[] mergesort1(int[] a, int[] b) {
     while (j < b.length)    
         answer[k++] = b[j++];
 
-    return answer;
+    return Arrays.copyOf(answer, k);;
 }
 }
