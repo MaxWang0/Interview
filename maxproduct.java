@@ -9,7 +9,7 @@ public class Solution {
       int _sum = 0;
       
       for( int i = 0; i < nums.length-1; i++){
-        _sum += nums[1];
+        _sum += nums[i];
         if(_sum> max_p){
           max_p = _sum;
           system.out.println(j + " " + max_p);
