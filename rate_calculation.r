@@ -8,3 +8,8 @@ write.table(output_rate, "output_rate.csv", row.names = F, col.names = F, sep = 
 rate <- read.table("output_rate.csv", header = T, sep = "\t")
 plot(rate[,1], rate[,2], main = "rate_timeseries", xlab = "time_sent", ylab = "rate" , ylim = c(0,1.5))
 
+library(zoo)
+zoo_rate <- read.zoo("output_rate.csv", header = T, sep = "\t")
+plot(zoo_rate, xlab = "time_sent", main = "Time_series")
+
+
