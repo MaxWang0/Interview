@@ -16,5 +16,9 @@ rate <- read.table("merge_output_invite_quote.csv", header = T, sep = "\t")
 output1 <- lm(qt$rate ~ qt$request_id)
 summary(output1)
 
+output2 <- lm(qt$rate ~ qt$request_id + qt$category + qt$location)
+summary(output2)
+
+
 
 
