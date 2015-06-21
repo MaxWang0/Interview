@@ -19,6 +19,21 @@ summary(output1)
 output2 <- lm(qt$rate ~ qt$request_id + qt$category + qt$location)
 summary(output2)
 
+anova(output1, output2)  # output1 reduced model, output2 full model
+
+qt <- read.table("moiq.csv", header = T, sep = "\t")
+output1 <- lm(qt$rate ~ qt$time_id)
+summary(output1)
+
+output 2<- lm(qt$rate ~ qt$time_id + qt$category + qt$location)
+summary(output2)
+
+anova(output1, output2)
+
+plot(qt$time_id, qt$rate, type = "n", main = “Time series analysis”, xlab = “time_id”, ylab = “rate”)
+abline(lm(qt$rate~qt$time_id), col = "blue", lwd = 2.5)
+abline(lm(qt$rate~qt$time_id+qt$category+qt$location ), col = "red", lwd = 2.5)
+legend("topright", inset=.05, c("with category and location", "without category and location"), lwd = c(2.5, 2.5), col = c("blue", "red"), horiz = FALSE)
 
 
 
