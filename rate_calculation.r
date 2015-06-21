@@ -12,4 +12,9 @@ library(zoo)
 zoo_rate <- read.zoo("output_rate.csv", header = T, sep = "\t")
 plot(zoo_rate, xlab = "time_sent", main = "Time_series")
 
+rate <- read.table("merge_output_invite_quote.csv", header = T, sep = "\t")
+output1 <- lm(qt$rate ~ qt$request_id)
+summary(output1)
+
+
 
