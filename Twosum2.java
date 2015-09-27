@@ -23,6 +23,14 @@ public class Solution{
        }
      }
     }
+    
+      for( int i = 0; i< n-1; i++){
+        paired = target - A[i];
+        if(arr.contains(pairs)):
+           return (pairs, i)
+     
+         
+    }
   }
   
   public boolean twosum(A[], start, end, target){
