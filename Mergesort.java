@@ -1,13 +1,13 @@
 public class Solution{
-  public mergesort(A[], start, end){
+  public mergesort(int A[], start, end){
     
     int mid = (start+end)/2;
-    mergesort(A[], start, mid);
-    mergesort(A[], mid+1, end);
-    merge(A[], mergesort(A[], start, mid), mergesort(A[], mid+1, end));
+    mergesort(A, start, mid);
+    mergesort(A, mid+1, end);
+    merge(A, mergesort(A[], start, mid), mergesort(A[], mid+1, end));
   }
   
-  merge(A[], B[], C[]){
+  merge(int A[], int B[], int C[]){
     b = B.length;
     c = C.length;
     if(b == 0| c != 0){
