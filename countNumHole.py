@@ -1,11 +1,7 @@
 def countHole(num):
 	hash= {}
 	hash[0]=1
-	hash[1]=0
-	hash[2]=0
-	hash[3]=0
 	hash[4]=1
-	hash[5]=0
 	hash[6]=1
 	hash[7]=1
 	hash[8]=2
@@ -16,7 +12,9 @@ def countHole(num):
 	while(num>0):
 		rem=num%10
 		num = int(num/10)
-		sum+=hash[rem]
+		if rem in hash:
+			sum+=hash[rem]
+		
 	return sum	
 def main():
 	print(countHole(123456))
